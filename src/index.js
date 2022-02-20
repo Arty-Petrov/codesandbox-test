@@ -1,5 +1,6 @@
 import "./styles.css";
 
+<<<<<<< HEAD
 function getMaxSubSum(arr) {
 
   let sum = 0;
@@ -14,6 +15,22 @@ function getMaxSubSum(arr) {
     }
   }
   return comp;
+=======
+function getMaxSubSum(arr){
+
+let sum = 0;
+let comp = 0;   
+
+for (let i = 0; i <= arr.length; i++){
+  if (arr[i] > 0) {
+    sum += +arr[i];
+  } else {
+    if (sum > comp) {comp = sum};
+    sum = 0;
+  }
+ }  
+return comp;
+>>>>>>> d31aa849f606b01e662de61314d73c361f003b61
 }
 
 console.log(getMaxSubSum([-1, 2, 3, -9])); // = 5  (сумма выделенных)
